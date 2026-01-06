@@ -2,7 +2,7 @@
 $_SESSION["project_sman_5_kota_komba"]["name_page"] = "Tambah Menu";
 require_once("../templates/views_top.php"); ?>
 
-<div class="nxl-content" style="height: 100vh;">
+<div class="nxl-content">
 
   <!-- [ page-header ] start -->
   <div class="page-header">

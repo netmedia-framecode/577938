@@ -3,7 +3,7 @@
   require_once("../../templates/views_top.php");
 ?>
 
-<div class="nxl-content" style="height: 100vh;">
+<div class="nxl-content">
 
   <!-- [ page-header ] start -->
   <div class="page-header">
