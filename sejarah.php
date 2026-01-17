@@ -7,9 +7,7 @@ require_once("sections/navbar.php");
 
 <header class="relative h-[400px] flex items-center justify-center overflow-hidden">
   <div class="absolute inset-0 z-0">
-    <?php $bg_image = ($data_sejarah['gambar_gedung'] != 'default.jpg') ? 'assets/img/profil/' . $data_sejarah['gambar_gedung'] : 'assets/img/school-bg.jpg'; ?>
-
-    <img src="<?= $baseURL ?><?= $bg_image ?>" alt="Background" class="w-full h-full object-cover filter brightness-50">
+    <img src="assets/img/school-bg.jpg" alt="Background" class="w-full h-full object-cover filter brightness-50">
   </div>
 
   <div class="container mx-auto px-6 relative z-10 text-center">

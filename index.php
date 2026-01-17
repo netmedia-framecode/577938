@@ -54,12 +54,7 @@ require_once("sections/navbar.php"); // Include Navbar di sini
         <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
 
         <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-          <img src="assets/img/kepsek.jpg" alt="Kepala Sekolah" class="w-full h-auto object-cover transform hover:scale-105 transition duration-500">
-
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6 text-white">
-            <h3 class="text-xl font-bold">Drs. Nama Kepala Sekolah, M.Pd.</h3>
-            <p class="text-blue-300 text-sm">Kepala SMAN 5 Kota Komba</p>
-          </div>
+          <img src="assets/img/profil-sekolah.jpg" alt="Kepala Sekolah" class="w-full h-auto object-cover transform hover:scale-105 transition duration-500">
         </div>
       </div>
 
@@ -244,9 +239,9 @@ require_once("sections/navbar.php"); // Include Navbar di sini
         <?php while ($berita = mysqli_fetch_assoc($query_berita_index)) { ?>
           <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col h-full group">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/img/berita/<?= $berita['gambar'] ?>" alt="<?= $berita['judul'] ?>" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+              <img src="assets/img/berita/<?= $berita['gambar_utama'] ?>" alt="<?= $berita['judul'] ?>" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
               <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg text-xs font-bold text-gray-900 shadow-sm">
-                <?= date('d M Y', strtotime($berita['tanggal'])) ?>
+                <?= date('d M Y', strtotime($berita['tanggal_posting'])) ?>
               </div>
             </div>
 
@@ -257,7 +252,7 @@ require_once("sections/navbar.php"); // Include Navbar di sini
                 </a>
               </h3>
               <p class="text-gray-500 text-sm mb-6 line-clamp-3 flex-grow">
-                <?= strip_tags(substr($berita['isi'], 0, 150)) ?>...
+                <?= strip_tags(substr($berita['isi_berita'], 0, 150)) ?>...
               </p>
               <a href="detail-berita?id_berita=<?= $berita['id'] ?>" class="inline-flex items-center text-sm font-semibold text-primary hover:text-blue-700 transition">
                 Baca Selengkapnya <i class="bi bi-chevron-right ml-1 text-xs"></i>
