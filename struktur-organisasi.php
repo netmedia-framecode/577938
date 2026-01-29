@@ -45,8 +45,8 @@ require_once("sections/navbar.php");
             if ($pimpinan['jenis_kelamin'] == 'P') $foto_pimpinan = 'default-p.png'; // Default Perempuan
 
             // Cek jika ada foto asli
-            if (!empty($pimpinan['foto']) && file_exists("assets/img/guru/" . $pimpinan['foto'])) {
-              $src_pimpinan = $baseURL . "assets/img/guru/" . $pimpinan['foto'];
+            if (!empty($pimpinan['foto']) && file_exists("assets/img/guru_staff/" . $pimpinan['foto'])) {
+              $src_pimpinan = $baseURL . "assets/img/guru_staff/" . $pimpinan['foto'];
             } else {
               // Gunakan UI Avatars atau gambar default lokal
               $src_pimpinan = "https://ui-avatars.com/api/?name=" . urlencode($pimpinan['nama']) . "&background=0d6efd&color=fff&size=500";
@@ -94,8 +94,8 @@ require_once("sections/navbar.php");
         <?php foreach ($data_staff as $staff): ?>
           <?php
           // Logic Foto
-          if (!empty($staff['foto']) && file_exists("assets/img/guru/" . $staff['foto'])) {
-            $src_staff = $baseURL . "assets/img/guru/" . $staff['foto'];
+          if (!empty($staff['foto']) && file_exists("assets/img/guru_staff/" . $staff['foto'])) {
+            $src_staff = $baseURL . "assets/img/guru_staff/" . $staff['foto'];
           } else {
             // Avatar Fallback (Inisial Nama)
             $bg_color = ($staff['jenis_kelamin'] == 'L') ? '0d6efd' : 'd63384'; // Biru (L), Pink (P)

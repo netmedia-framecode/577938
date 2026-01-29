@@ -42,7 +42,7 @@ require_once("sections/navbar.php");
         <?php while ($ekskul = mysqli_fetch_assoc($query_ekskul)): ?>
           <?php
           // Logic Cek Gambar
-          $img_path = "assets/img/ekskul/" . $ekskul['foto_kegiatan'];
+          $img_path = "assets/img/ekstrakurikuler/" . $ekskul['foto_kegiatan'];
           if (!empty($ekskul['foto_kegiatan']) && file_exists($img_path)) {
             $src_ekskul = $baseURL . $img_path;
           } else {
