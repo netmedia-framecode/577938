@@ -33,7 +33,7 @@ require_once("../../templates/views_top.php"); ?>
                     <th class="text-center">Email</th>
                     <th class="text-center">Status</th>
                     <th class="text-center">Role</th>
-                    <th class="text-center">Aksi</th>
+                    <!-- <th class="text-center">Aksi</th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -44,13 +44,13 @@ require_once("../../templates/views_top.php"); ?>
                     <td><?= $data['email'] ?></td>
                     <td><?= $data['status'] ?></td>
                     <td><?= $data['role'] ?></td>
-                    <td>
+                    <!-- <td>
                       <div class="hstack gap-2 justify-content-center">
                         <a href="edit-user?p=<?= $data['id_user']?>" class="btn btn-warning btn-sm">
                           <i class="bi bi-pencil-square"></i>
                         </a>
                       </div>
-                    </td>
+                    </td> -->
                   </tr>
                   <?php } ?>
                 </tbody>
